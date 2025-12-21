@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aptitude Test Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Mode Selection Screen -->
+    <div id="mode-selection" class="screen active">
+      <h1>Aptitude Test Platform</h1>
+      <p class="subtitle">Choose your test mode</p>
+      <div class="mode-buttons">
+        <button class="mode-btn" data-mode="numerical">
+          <span class="mode-title">Numerical Reasoning</span>
+          <span class="mode-desc">2 questions • 2 minutes</span>
+        </button>
+        <button class="mode-btn" data-mode="verbal">
+          <span class="mode-title">Verbal Reasoning</span>
+          <span class="mode-desc">2 questions • 2 minutes</span>
+        </button>
+        <button class="mode-btn" data-mode="inductive">
+          <span class="mode-title">Inductive Reasoning</span>
+          <span class="mode-desc">2 questions • 2 minutes</span>
+        </button>
+        <button class="mode-btn" data-mode="deductive">
+          <span class="mode-title">Deductive Reasoning</span>
+          <span class="mode-desc">2 questions • 2 minutes</span>
+        </button>
+        <button class="mode-btn combined" data-mode="combined">
+          <span class="mode-title">Combined Test</span>
+          <span class="mode-desc">8 questions • 8 minutes</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Test Screen -->
+    <div id="test-screen" class="screen">
+      <div class="test-header">
+        <div class="progress-info">
+          <span id="question-counter">Question 1 of 2</span>
+          <span id="mode-name"></span>
+        </div>
+        <div class="timer" id="timer">60</div>
+      </div>
+      
+      <div class="question-container">
+        <h2 id="question-text"></h2>
+        <div id="options-container" class="options"></div>
+      </div>
+      
+      <div class="test-footer">
+        <button id="next-btn" class="primary-btn">Next Question</button>
+      </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="results-screen" class="screen">
+      <h1>Test Complete!</h1>
+      <div class="results-container">
+        <div class="score-circle">
+          <span id="score-percentage">0%</span>
+        </div>
+        <div class="score-details">
+          <p id="score-text">You scored <span id="score-fraction">0/0</span></p>
+          <p id="score-message"></p>
+        </div>
+        <div id="breakdown-container"></div>
+      </div>
+      <button id="restart-btn" class="primary-btn">Take Another Test</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

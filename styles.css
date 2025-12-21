@@ -1,0 +1,374 @@
+/* Google Material Design inspired styles */
+:root {
+  --primary-color: #1a73e8;
+  --primary-dark: #1557b0;
+  --primary-light: #4285f4;
+  --success-color: #0f9d58;
+  --error-color: #d93025;
+  --warning-color: #f9ab00;
+  --text-primary: #202124;
+  --text-secondary: #5f6368;
+  --border-color: #dadce0;
+  --background: #ffffff;
+  --surface: #f8f9fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: var(--text-primary);
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+}
+
+.screen {
+  display: none;
+  background: var(--background);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in;
+}
+
+.screen.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mode Selection Screen */
+#mode-selection h1 {
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  font-size: 16px;
+}
+
+.mode-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mode-btn {
+  background: var(--surface);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.mode-btn:hover {
+  border-color: var(--primary-color);
+  background: #f1f3f4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 115, 232, 0.2);
+}
+
+.mode-btn.combined {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+  color: white;
+  border: none;
+}
+
+.mode-btn.combined:hover {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+}
+
+.mode-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.mode-desc {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Test Screen */
+.test-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.progress-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#question-counter {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+#mode-name {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.timer {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--primary-color);
+  min-width: 80px;
+  text-align: right;
+}
+
+.timer.warning {
+  color: var(--warning-color);
+  animation: pulse 1s infinite;
+}
+
+.timer.danger {
+  color: var(--error-color);
+  animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.question-container {
+  margin-bottom: 32px;
+}
+
+#question-text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option {
+  background: var(--surface);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 16px;
+}
+
+.option:hover {
+  border-color: var(--primary-color);
+  background: #f1f3f4;
+}
+
+.option.selected {
+  background: var(--primary-light);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.option.correct {
+  background: var(--success-color);
+  color: white;
+  border-color: var(--success-color);
+}
+
+.option.incorrect {
+  background: var(--error-color);
+  color: white;
+  border-color: var(--error-color);
+}
+
+.test-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.primary-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.primary-btn:hover {
+  background: var(--primary-dark);
+  box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3);
+}
+
+.primary-btn:disabled {
+  background: var(--border-color);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Results Screen */
+#results-screen h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 32px;
+  color: var(--text-primary);
+}
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.score-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(26, 115, 232, 0.3);
+}
+
+#score-percentage {
+  font-size: 48px;
+  font-weight: 500;
+  color: white;
+}
+
+.score-details {
+  text-align: center;
+}
+
+#score-text {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+#score-fraction {
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+#score-message {
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+#breakdown-container {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--surface);
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.breakdown-category {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.breakdown-score {
+  color: var(--text-secondary);
+}
+
+#restart-btn {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .screen {
+    padding: 24px;
+  }
+
+  #mode-selection h1 {
+    font-size: 24px;
+  }
+
+  .mode-btn {
+    padding: 16px;
+  }
+
+  .mode-title {
+    font-size: 18px;
+  }
+
+  #question-text {
+    font-size: 18px;
+  }
+
+  .timer {
+    font-size: 24px;
+  }
+
+  .score-circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  #score-percentage {
+    font-size: 36px;
+  }
+}
