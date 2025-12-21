@@ -68,6 +68,13 @@ body {
   color: var(--text-primary);
 }
 
+.description {
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  font-size: 18px;
+}
+
 .subtitle {
   text-align: center;
   color: var(--text-secondary);
@@ -135,7 +142,7 @@ body {
 
 .quit-btn {
   background: transparent;
-  color: var(--text-secondary);
+  color: var(--text-tertiary);
   border: 2px solid var(--border-color);
   border-radius: 8px;
   padding: 8px 16px;
