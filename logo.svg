@@ -1,0 +1,13 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer circle -->
+  <circle cx="40" cy="40" r="38" fill="#43a047" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Inner circle -->
+  <circle cx="40" cy="40" r="30" fill="#66bb6a"/>
+  
+  <!-- MT text -->
+  <text x="40" y="42" font-family="Roboto, Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">MT</text>
+  
+  <!-- 2.0 text -->
+  <text x="40" y="58" font-family="Roboto, Arial, sans-serif" font-size="14" font-weight="500" fill="#ffffff" text-anchor="middle">2.0</text>
+</svg>
