@@ -232,6 +232,7 @@ const timer = document.getElementById('timer');
 const questionText = document.getElementById('question-text');
 const optionsContainer = document.getElementById('options-container');
 const nextBtn = document.getElementById('next-btn');
+const quitBtn = document.getElementById('quit-btn');
 const scorePercentage = document.getElementById('score-percentage');
 const scoreFraction = document.getElementById('score-fraction');
 const scoreText = document.getElementById('score-text');
@@ -249,6 +250,7 @@ modeButtons.forEach((button) => {
 
 nextBtn.addEventListener('click', handleNextQuestion);
 restartBtn.addEventListener('click', restartTest);
+quitBtn.addEventListener('click', quitTest);
 
 // Initialize test based on mode
 function startTest(mode) {
@@ -326,13 +328,29 @@ function displayQuestion() {
 
 // Handle option selection
 function selectOption(index) {
-  // Remove previous selection
-  document.querySelectorAll('.option').forEach((opt) => {
-    opt.classList.remove('selected');
+  const question = currentQuestions[currentQuestionIndex];
+  const options = document.querySelectorAll('.option');
+  
+  // Disable all options after selection
+  options.forEach((opt) => {
+    opt.classList.add('disabled');
   });
 
-  // Mark new selection
-  document.querySelectorAll('.option')[index].classList.add('selected');
+  // Mark the selected option
+  options[index].classList.add('selected');
+  
+  // Show immediate feedback
+  if (index === question.correct) {
+    // Correct answer
+    options[index].classList.remove('selected');
+    options[index].classList.add('correct');
+  } else {
+    // Wrong answer - show the user's incorrect choice
+    options[index].classList.remove('selected');
+    options[index].classList.add('incorrect');
+    // Also highlight the correct answer
+    options[question.correct].classList.add('correct');
+  }
   
   // Store answer
   userAnswers[currentQuestionIndex] = index;
@@ -495,4 +513,12 @@ function switchScreen(screen) {
 function restartTest() {
   stopTimer();
   switchScreen('mode');
+}
+
+// Quit test
+function quitTest() {
+  if (confirm('Are you sure you want to quit the test? Your progress will be lost.')) {
+    stopTimer();
+    switchScreen('mode');
+  }
 }
