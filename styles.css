@@ -177,7 +177,7 @@ body {
   /* Shared baseline aligned with bottom of logo / timer / counter */
   --header-baseline: calc(var(--logo-top) + (var(--logo-size) / 2));
   --separator-gap: 12px; /* increase/decrease to move the line down/up */
-  /* Default: portrait-first horizontal positioning */
+  /* Portrait default: logo centered between counter (left) and timer (right) */
   --logo-left: 50%;
 }
 
@@ -583,6 +583,14 @@ body {
   margin-top: 16px;
   font-size: 12px;
   color: var(--text-secondary);
+}
+
+/* Portrait screens: keep logo equidistant between counter and timer */
+@media (max-aspect-ratio: 3/4) {
+  .test-header {
+    /* Center logo exactly between left (question num) and right (timer) */
+    --logo-left: 50%;
+  }
 }
 
 /* Landscape screens: lock logo to exact horizontal center */
