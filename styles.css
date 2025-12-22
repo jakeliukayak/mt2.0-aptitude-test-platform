@@ -62,40 +62,56 @@ body {
 /* Mode Selection Screen */
 .header-with-logo {
   display: flex;
-  align-items: flex-start;
-  gap: 0px;
-  margin-bottom: 0px;
+
+  /* Center the combined (logo + text stack) block */
+  justify-content: center;
+
+  /* Center the logo vertically relative to the text stack (not dragged down by margins) */
+  align-items: center;
+
+  /* Dynamic horizontal spacing between logo and text */
+  gap: clamp(16px, 4vw, 48px);
+
+  /* Give the header area consistent breathing room */
+  padding: clamp(8px, 2vw, 16px) 0;
+
+  margin-bottom: 0;
 }
 
 .main-logo {
-  width: 80px;
-  height: 80px;
-  flex-shrink: 0;
+  width: clamp(56px, 8vw, 96px);
+  height: clamp(56px, 8vw, 96px);
+  object-fit: contain;
+  flex: 0 0 auto;
+  display: block;
 }
 
 .header-text {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* keep all text centered as a stack */
+  gap: 12px;           /* replaces margin-based spacing */
 }
 
 #mode-selection h1 {
   font-size: 32px;
   font-weight: 500;
   text-align: center;
-  margin-bottom: 8px;
+  margin-bottom: 0;
   color: var(--text-primary);
 }
 
 .description {
   text-align: center;
   color: var(--text-primary);
-  margin-bottom: 24px;
+  margin-bottom: 0;
   font-size: 18px;
 }
 
 .subtitle {
   text-align: center;
   color: var(--text-secondary);
-  margin-bottom: 32px;
+  margin-bottom: 0;
   font-size: 16px;
 }
 
@@ -152,17 +168,38 @@ body {
   position: relative;
   margin-bottom: 32px;
   padding-bottom: 16px;
-  border-bottom: 1px solid var(--border-color);
-  min-height: 100px; /* ensures space for centered logo */
+  min-height: clamp(80px, 15vw, 140px); /* responsive space for centered logo */
+  --logo-top: 35%;
+  --logo-size: clamp(48px, 10vw, 100px);
+  /* Shared baseline aligned with bottom of logo / timer / counter */
+  --header-baseline: calc(var(--logo-top) + (var(--logo-size) / 2));
+  --separator-gap: 12px; /* increase/decrease to move the line down/up */
+}
+
+.test-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  /* Align separator with logo / timer bottom */
+  top: calc(var(--header-baseline) + var(--separator-gap));
+
+  height: 1px;
+  background: var(--border-color);
 }
 
 .test-logo {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: var(--logo-top);
   transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
+
+  /* Responsive logo sizing */
+  width: var(--logo-size);
+  height: var(--logo-size);
+
+  object-fit: contain;
 }
 
 .quit-btn {
@@ -183,7 +220,9 @@ body {
 .progress-info {
   position: absolute;
   left: 0;
-  bottom: 16px; /* aligns just above the separator line */
+  top: calc(var(--logo-top) + (var(--logo-size) / 2));
+  bottom: auto;
+  translate: 0 -100%;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -202,7 +241,9 @@ body {
 .timer {
   position: absolute;
   right: 0;
-  bottom: 16px; /* aligns just above the separator line */
+  top: calc(var(--logo-top) + (var(--logo-size) / 2));
+  bottom: auto;
+  translate: 0 -100%;
   font-size: 32px;
   font-weight: 500;
   color: var(--primary-color);
@@ -419,19 +460,27 @@ body {
   }
 
   .header-with-logo {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 16px;
+    padding: 8px 0;
   }
 
   .main-logo {
-    width: 60px;
-    height: 60px;
+    width: clamp(56px, 14vw, 80px);
+    height: clamp(56px, 14vw, 80px);
+    object-fit: contain;
+  }
+
+  .header-text {
+    gap: 10px;
   }
 
   .test-logo {
-    width: 40px;
-    height: 40px;
+    width: var(--logo-size);
+    height: var(--logo-size);
   }
 
   #mode-selection h1 {
@@ -457,10 +506,6 @@ body {
   .score-circle {
     width: 150px;
     height: 150px;
-  }
-
-  #score-percentage {
-    font-size: 36px;
   }
 
   .quit-btn {
