@@ -177,6 +177,8 @@ body {
   /* Shared baseline aligned with bottom of logo / timer / counter */
   --header-baseline: calc(var(--logo-top) + (var(--logo-size) / 2));
   --separator-gap: 12px; /* increase/decrease to move the line down/up */
+  /* Default: portrait-first horizontal positioning */
+  --logo-left: 50%;
 }
 
 .test-header::after {
@@ -194,7 +196,7 @@ body {
 
 .test-logo {
   position: absolute;
-  left: 50%;
+  left: var(--logo-left);
   top: var(--logo-top);
   transform: translate(-50%, -50%);
 
@@ -581,4 +583,11 @@ body {
   margin-top: 16px;
   font-size: 12px;
   color: var(--text-secondary);
+}
+
+/* Landscape screens: lock logo to exact horizontal center */
+@media (min-aspect-ratio: 4/3) {
+  .test-header {
+    --logo-left: 50%;
+  }
 }
