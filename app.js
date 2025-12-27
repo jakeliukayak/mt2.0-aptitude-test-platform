@@ -31,7 +31,7 @@ const questionBank = {
   ],
   verbal: [
     {
-      question: 'I. Obesity has reached epidemic proportions in the US due to unhealthy diets.\n\nII. Good rainfall has resulted in a high yield of corn in the US over the last decade.',
+      question: 'I. Obesity has reached epidemic proportions in the US due to unhealthy diets.\nII. Good rainfall has resulted in a high yield of corn in the US over the last decade.',
       options: ['I is the cause and II is its effect', 'II is the cause and I is its effect', 'I and II are independent statements', 'Both I and II are effects of some common cause'],
       correct: 2,
     },
