@@ -152,11 +152,6 @@ const questionBank = {
       options: ['11', '12', '13', '14'],
       correct: 2,
     },
-    {
-      question: 'What comes next: January, March, May, ?',
-      options: ['June', 'July', 'August', 'September'],
-      correct: 1,
-    },
   ],
   deductive: [
     {
