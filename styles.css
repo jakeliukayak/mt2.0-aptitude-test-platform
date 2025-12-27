@@ -570,10 +570,7 @@ body {
 
 .footer-link:hover {
   border-color: var(--primary-color);
-  background: var(--primary-light);
-  color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(102, 187, 106, 0.3);
 }
 
 .footer-link svg {

@@ -36,12 +36,12 @@ const questionBank = {
       correct: 2,
     },
     {
-      question: 'I. A degree from an accredited college often leads to better educational and professional outcomes than a degree from an unaccredited college.\n\nII. More students seek admission to accredited colleges than unaccredited colleges.',
+      question: 'I. A degree from an accredited college often leads to better educational and professional outcomes than a degree from an unaccredited college.\nII. More students seek admission to accredited colleges than unaccredited colleges.',
       options: ['I is the cause and II is its effect', 'II is the cause and I is its effect', 'I and II are independent statements', 'Both I and II are effects of some common cause'],
       correct: 0,
     },
     {
-      question: 'I. Using the wrong kind of wire in a home renovation can result in an electrical fire.\n\nII. It is always recommended to use a certified electrician and follow building codes.',
+      question: 'I. Using the wrong kind of wire in a home renovation can result in an electrical fire.\nII. It is always recommended to use a certified electrician and follow building codes.',
       options: ['I is the cause and II is its effect', 'II is the cause and I is its effect', 'I and II are independent statements', 'Both I and II are effects of some common cause'],
       correct: 0,
     },
@@ -90,7 +90,7 @@ const questionBank = {
       correct: 1,
     },
     {
-      question: 'Statements:\nAll auditors are accountants.\nSome cashiers are accountants.\nAll accnountants are CFOs.\n\nConclusion:\nI. All CFOs are auditors.\nII. All accountants are auditors.\nIII. Some auditors are cashiers.\IV. Some accountants are cashiers.',
+      question: 'Statements:\nAll auditors are accountants.\nSome cashiers are accountants.\nAll accnountants are CFOs.\n\nConclusion:\nI. All CFOs are auditors.\nII. All accountants are auditors.\nIII. Some auditors are cashiers.\nIV. Some accountants are cashiers.',
       options: ['Only I follows', 'Only II follows', 'Only III follows', 'Only IV follows'],
       correct: 3,
     },
