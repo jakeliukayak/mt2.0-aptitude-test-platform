@@ -31,54 +31,29 @@ const questionBank = {
   ],
   verbal: [
     {
-      question: 'Choose the word that is most similar in meaning to "ABUNDANT".',
-      options: ['Scarce', 'Plentiful', 'Limited', 'Rare'],
-      correct: 1,
-    },
-    {
-      question: 'Choose the word that is opposite in meaning to "EXPAND".',
-      options: ['Grow', 'Contract', 'Increase', 'Enlarge'],
-      correct: 1,
-    },
-    {
-      question: 'Complete the analogy: Book is to Reading as Fork is to ___',
-      options: ['Cooking', 'Eating', 'Kitchen', 'Spoon'],
-      correct: 1,
-    },
-    {
-      question: 'Which word does NOT belong with the others?',
-      options: ['Rose', 'Tulip', 'Oak', 'Daisy'],
+      question: 'I. Obesity has reached epidemic proportions in the US due to unhealthy diets.\n\nII. Good rainfall has resulted in a high yield of corn in the US over the last decade.',
+      options: ['I is the cause and II is its effect', 'II is the cause and I is its effect', 'I and II are independent statements', 'Both I and II are effects of some common cause'],
       correct: 2,
     },
     {
-      question: 'Choose the word that best completes the sentence: "The evidence was ___ and could not be disputed."',
-      options: ['Ambiguous', 'Vague', 'Conclusive', 'Doubtful'],
+      question: 'I. A degree from an accredited college often leads to better educational and professional outcomes than a degree from an unaccredited college.\n\nII. More students seek admission to accredited colleges than unaccredited colleges.',
+      options: ['I is the cause and II is its effect', 'II is the cause and I is its effect', 'I and II are independent statements', 'Both I and II are effects of some common cause'],
+      correct: 0,
+    },
+    {
+      question: 'I. Using the wrong kind of wire in a home renovation can result in an electrical fire.\n\nII. It is always recommended to use a certified electrician and follow building codes.',
+      options: ['I is the cause and II is its effect', 'II is the cause and I is its effect', 'I and II are independent statements', 'Both I and II are effects of some common cause'],
+      correct: 0,
+    },
+    {
+      question: 'Statements: Fossils are a treasure trove for scientific study into prehistoric times. Some plant and animal remains, possibly stuck in thick mud millions of years ago, solidified into stones with different degrees of preservation depending on the acidity of the soil, weather conditions, tectonic activities etc. Fossilization has preserved a huge variety of pre-historic life, ranging from the shells of small crustaceans to gigantic dinosaur skeletons.\n\nInference: Not everything that got stuck in mud in prehistoric times turned into fossils.',
+      options: ['True', 'False', 'Probably True', 'Probably False'],
       correct: 2,
     },
     {
-      question: 'What is the meaning of the idiom "Break the ice"?',
-      options: ['To be cold', 'To initiate conversation', 'To break something', 'To stop talking'],
-      correct: 1,
-    },
-    {
-      question: 'Choose the correctly spelled word:',
-      options: ['Occurance', 'Ocurrence', 'Occurrence', 'Occurence'],
-      correct: 2,
-    },
-    {
-      question: 'Which sentence is grammatically correct?',
-      options: ['She don\'t like apples.', 'She doesn\'t likes apples.', 'She doesn\'t like apples.', 'She not like apples.'],
-      correct: 2,
-    },
-    {
-      question: 'Choose the word that is most similar to "DILIGENT".',
-      options: ['Lazy', 'Careless', 'Hardworking', 'Negligent'],
-      correct: 2,
-    },
-    {
-      question: 'Complete the analogy: Hot is to Cold as Day is to ___',
-      options: ['Sun', 'Night', 'Light', 'Morning'],
-      correct: 1,
+      question: 'Statements: Poachers have been known to blatantly violate the boundaries of Africa\'s natural game reserves. The most valuable catch is the tusk of a bull elephant, which fetches a high price in the international ivory black market. Often, skinned carcasses of lions are found, as are rhinos that have been shot dead by high-caliber rifles and left with their horns cut off. Illegal trade in animal body parts is flourishing.\n\nInference: The security of African game reserves is inadequately staffed and largely ineffective.',
+      options: ['True', 'False', 'Probably True', 'Probably False'],
+      correct: 0,
     },
   ],
   inductive: [
