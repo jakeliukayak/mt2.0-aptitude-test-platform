@@ -1,57 +1,32 @@
 // Aptitude Test Platform Application
 
-// Question Bank - 10 questions for each category
+// Question Bank - 5 questions for each category
 const questionBank = {
   numerical: [
     {
-      question: 'If a train travels 120 km in 2 hours, what is its average speed in km/h?',
-      options: ['50 km/h', '60 km/h', '70 km/h', '80 km/h'],
+      question: 'Jake completed 1/2 of a task before going on vacation. Victor took over and manage to complete 25% of the remaining task. How much of the task is still pending?',
+      options: ['12.5%', '25%', '37.5%', '75%'],
       correct: 1,
     },
     {
-      question: 'What is 15% of 80?',
-      options: ['10', '12', '14', '16'],
-      correct: 1,
+      question: 'A wireless phone company. has two pricing plans. Plan A costs $50/month for unlimited talk. Plan B costs $30/month for 400 minutes and $0.10 for each additional minute. If a consumer averages 675 minutes per month, what would be the difference in cost between the two pricing plans?',
+      options: ['Plan A would cost $10 more/month', 'Plan A would cost $4.50 more/month', 'Plan B would cost $5.25 more/month', 'Plan B would cost $7.50 more/month'],
+      correct: 3,
     },
     {
-      question: 'A shop offers a 20% discount on a $50 item. What is the final price?',
-      options: ['$30', '$35', '$40', '$45'],
+      question: 'A group of four numbers has an average (arithmetic mean) of 30. The first three numbers are 32, 26, and 24. What is the other number?',
+      options: ['30', '33', '38', '48'],
       correct: 2,
     },
     {
-      question: 'If 5 workers can complete a task in 8 days, how many days will it take 10 workers?',
-      options: ['2 days', '4 days', '6 days', '8 days'],
-      correct: 1,
-    },
-    {
-      question: 'What is the next number in the sequence: 2, 6, 12, 20, ?',
-      options: ['26', '28', '30', '32'],
+      question: 'Which of the following is the smallest value?',
+      options: ['0.709', '1.079', '0.097', '0.907'],
       correct: 2,
     },
     {
-      question: 'A rectangle has a length of 12 cm and width of 5 cm. What is its area?',
-      options: ['34 cm²', '50 cm²', '60 cm²', '70 cm²'],
-      correct: 2,
-    },
-    {
-      question: 'If x + 5 = 12, what is the value of x?',
-      options: ['5', '6', '7', '8'],
-      correct: 2,
-    },
-    {
-      question: 'What is 3/4 expressed as a percentage?',
-      options: ['65%', '70%', '75%', '80%'],
-      correct: 2,
-    },
-    {
-      question: 'A car travels 240 km using 20 liters of fuel. What is the fuel efficiency in km/L?',
-      options: ['10 km/L', '12 km/L', '14 km/L', '16 km/L'],
-      correct: 1,
-    },
-    {
-      question: 'If the ratio of boys to girls in a class is 3:2 and there are 15 boys, how many girls are there?',
-      options: ['8', '10', '12', '15'],
-      correct: 1,
+      question: 'A family drives 300 miles on a road trip. They take a longer route to avoid traffic on their return trip, traveling 45% further. How many miles did the family drive during their return trip?',
+      options: ['405', '415', '425', '435'],
+      correct: 3,
     },
   ],
   verbal: [
@@ -108,101 +83,56 @@ const questionBank = {
   ],
   inductive: [
     {
-      question: 'What comes next in the pattern: A, C, E, G, ?',
-      options: ['H', 'I', 'J', 'K'],
+      question: 'What would be the next number in the following series: 2 ... 5 ... 7 ... 12 ... 19 ... ?',
+      options: ['29', '31', '33', '37', '39'],
       correct: 1,
     },
     {
-      question: 'Find the pattern: 1, 4, 9, 16, 25, ?',
-      options: ['30', '32', '36', '40'],
-      correct: 2,
-    },
-    {
-      question: 'Which shape completes the pattern: Circle, Square, Triangle, Circle, Square, ?',
-      options: ['Circle', 'Square', 'Triangle', 'Rectangle'],
-      correct: 2,
-    },
-    {
-      question: 'What is the next number: 2, 4, 8, 16, ?',
-      options: ['24', '28', '32', '36'],
-      correct: 2,
-    },
-    {
-      question: 'Find the pattern: AB, CD, EF, GH, ?',
-      options: ['IJ', 'HI', 'JK', 'KL'],
-      correct: 0,
-    },
-    {
-      question: 'What comes next: Monday, Wednesday, Friday, ?',
-      options: ['Saturday', 'Sunday', 'Tuesday', 'Thursday'],
+      question: 'What is the missing number in the following sequence: 1, 8, 22, 43, ?, 106 ?',
+      options: ['61', '71', '85', '97'],
       correct: 1,
     },
     {
-      question: 'Pattern: 3, 6, 12, 24, ?',
-      options: ['36', '42', '48', '54'],
+      question: 'What would be the next group of letters in the following series: exkf ... fwke ... gvkd ... hukc ... ?',
+      options: ['gukb', 'itkd', 'itkb', 'jtkb', 'ivkd'],
       correct: 2,
     },
-    {
-      question: 'What is the next letter: Z, Y, X, W, ?',
-      options: ['U', 'V', 'T', 'S'],
+      {
+      question: 'What is the next number in the following sequence: 26, 37, 50, ?',
+      options: ['62', '65', '70', '71'],
       correct: 1,
     },
     {
-      question: 'Find the pattern: 1, 1, 2, 3, 5, 8, ?',
-      options: ['11', '12', '13', '14'],
+      question: 'What is the next number in the following sequence: 6, 12, 20, ?',
+      options: ['24', '28', '30', '38'],
       correct: 2,
     },
   ],
   deductive: [
     {
-      question: 'All cats are animals. Fluffy is a cat. Therefore:',
-      options: ['Fluffy is an animal', 'Fluffy is not an animal', 'All animals are cats', 'Some cats are not animals'],
+      question: 'Statements:\nAll swimmers are athletes.\nSome stars are swimmers.\n\nConclusion:\nI. Some athletes are stars.\nII. Some athletes are swimmers.',
+      options: ['Only I follows', 'Both I and II follow', 'Only II follows', 'Neither I nor II follows'],
+      correct: 1,
+    },
+    {
+      question: 'Statements:\nAll auditors are accountants.\nSome cashiers are accountants.\nAll accnountants are CFOs.\n\nConclusion:\nI. All CFOs are auditors.\nII. All accountants are auditors.\nIII. Some auditors are cashiers.\IV. Some accountants are cashiers.',
+      options: ['Only I follows', 'Only II follows', 'Only III follows', 'Only IV follows'],
+      correct: 3,
+    },
+    {
+      question: 'Statements:\nAll monkeys are apes.\nAll ape are primates.\n\nConclusion:\nI. Some primates are apes.\nII. Some primates are monkeys.',
+      options: ['Only I follows', 'Both I and II follow', 'Only II follows', 'Neither I nor II follows'],
+      correct: 1,
+    },
+    {
+      question: 'In a conference of eight, Ally, Beatrice, Chloe, Dorothy, Eleanore, Flora, Grace, and Hannah are sitting around a circular table facing towards the center.\n\n- Beatrice is seated immediately to the left of Flora.\n- Chloe is sitting between Eleanore and Flora.\n- Eleanore is sitting next to Grace but not to Hannah.\n- Hannah is not sitting next to Dorothy but is seated immediately to the left of Ally.\n\nWho is sitting between Hannah and Eleanore?',
+      options: ['Ally', 'Flora', 'Beatrice', 'Grace'],
+      correct: 3,
+    },    
+    {
+      question: 'Software Update Information:\n\n- Katarina: must be immediately after Paco\n- Melody: cannot be before Paco\n- Ollie: must be first\n- Lewis: exactly one computer must be updated between Lewis\'s and Katarina\'s\n- Ningning: must be after Lewis\n- Paco: must be before Lewis\n\nWho is the last to be updated?',
+      options: ['Ningning', 'Lewis', 'Melody', 'Ollie'],
       correct: 0,
-    },
-    {
-      question: 'If it rains, the ground gets wet. The ground is wet. Therefore:',
-      options: ['It must have rained', 'It might have rained', 'It did not rain', 'The sun is shining'],
-      correct: 1,
-    },
-    {
-      question: 'All roses are flowers. Some flowers are red. Therefore:',
-      options: ['All roses are red', 'Some roses might be red', 'No roses are red', 'All red things are roses'],
-      correct: 1,
-    },
-    {
-      question: 'If John is taller than Mary, and Mary is taller than Sue, then:',
-      options: ['Sue is taller than John', 'John is taller than Sue', 'Sue is taller than Mary', 'They are all the same height'],
-      correct: 1,
-    },
-    {
-      question: 'All doctors are educated. Sarah is educated. Therefore:',
-      options: ['Sarah is a doctor', 'Sarah might be a doctor', 'Sarah is not a doctor', 'All educated people are doctors'],
-      correct: 1,
-    },
-    {
-      question: 'If A = B and B = C, then:',
-      options: ['A ≠ C', 'A = C', 'A > C', 'A < C'],
-      correct: 1,
-    },
-    {
-      question: 'No mammals can fly. Bats can fly. Therefore:',
-      options: ['Bats are mammals', 'Bats are not mammals', 'Some mammals can fly', 'All flying animals are bats'],
-      correct: 1,
-    },
-    {
-      question: 'If all squares are rectangles, and all rectangles are quadrilaterals, then:',
-      options: ['All squares are quadrilaterals', 'Some squares are not quadrilaterals', 'No squares are quadrilaterals', 'Quadrilaterals are squares'],
-      correct: 0,
-    },
-    {
-      question: 'Either it will rain or it will snow. It is not snowing. Therefore:',
-      options: ['It is not raining', 'It might rain', 'It is raining', 'It will snow later'],
-      correct: 2,
-    },
-    {
-      question: 'All students in the class passed. Tom is in the class. Therefore:',
-      options: ['Tom might have passed', 'Tom failed', 'Tom passed', 'Tom is not a student'],
-      correct: 2,
     },
   ],
 };
