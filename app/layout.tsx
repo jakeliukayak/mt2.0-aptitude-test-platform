@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+import { basePath } from "@/lib/basePath";
 
 export const metadata: Metadata = {
   title: "MT2.0 Aptitude Test",

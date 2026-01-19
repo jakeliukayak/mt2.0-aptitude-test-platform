@@ -4,8 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { addParticipant } from '@/lib/supabaseTestManager';
-
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+import { basePath } from '@/lib/basePath';
 
 export default function Home() {
   const router = useRouter();

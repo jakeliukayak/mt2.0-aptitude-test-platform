@@ -5,8 +5,7 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { getCombinedTestQuestions, type Question } from '@/lib/questionBank';
 import { updateTestCompletion } from '@/lib/supabaseTestManager';
-
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+import { basePath } from '@/lib/basePath';
 
 export default function TestPage() {
   const router = useRouter();
