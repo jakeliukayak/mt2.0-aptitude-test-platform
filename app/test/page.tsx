@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { getCombinedTestQuestions, type Question } from '@/lib/questionBank';
 import { updateTestCompletion } from '@/lib/supabaseTestManager';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function TestPage() {
   const router = useRouter();
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -170,7 +172,7 @@ export default function TestPage() {
             {/* Logo - Center */}
             <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
               <Image
-                src="/logo.svg"
+                src={`${basePath}/logo.svg`}
                 alt="MT2.0 Logo"
                 width={80}
                 height={80}
