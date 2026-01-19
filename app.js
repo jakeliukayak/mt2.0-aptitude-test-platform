@@ -4,12 +4,12 @@
 const questionBank = {
   numerical: [
     {
-      question: 'Jake completed 1/2 of a task before going on vacation. Victor took over and manage to complete 25% of the remaining task. How much of the task is still pending?',
+      question: 'Jake completed 1/2 of a task before going on vacation. Victor took over and managed to complete 25% of the remaining task. How much of the task is still pending?',
       options: ['12.5%', '25%', '37.5%', '75%'],
       correct: 1,
     },
     {
-      question: 'A wireless phone company. has two pricing plans. Plan A costs $50/month for unlimited talk. Plan B costs $30/month for 400 minutes and $0.10 for each additional minute. If a consumer averages 675 minutes per month, what would be the difference in cost between the two pricing plans?',
+      question: 'A wireless phone company has two pricing plans. Plan A costs $50/month for unlimited talk. Plan B costs $30/month for 400 minutes and $0.10 for each additional minute. If a consumer averages 675 minutes per month, what would be the difference in cost between the two pricing plans?',
       options: ['Plan A would cost $10 more/month', 'Plan A would cost $4.50 more/month', 'Plan B would cost $5.25 more/month', 'Plan B would cost $7.50 more/month'],
       correct: 3,
     },
@@ -90,12 +90,12 @@ const questionBank = {
       correct: 1,
     },
     {
-      question: 'Statements:\nAll auditors are accountants.\nSome cashiers are accountants.\nAll accnountants are CFOs.\n\nConclusion:\nI. All CFOs are auditors.\nII. All accountants are auditors.\nIII. Some auditors are cashiers.\nIV. Some accountants are cashiers.',
+      question: 'Statements:\nAll auditors are accountants.\nSome cashiers are accountants.\nAll accountants are CFOs.\n\nConclusion:\nI. All CFOs are auditors.\nII. All accountants are auditors.\nIII. Some auditors are cashiers.\nIV. Some accountants are cashiers.',
       options: ['Only I follows', 'Only II follows', 'Only III follows', 'Only IV follows'],
       correct: 3,
     },
     {
-      question: 'Statements:\nAll monkeys are apes.\nAll ape are primates.\n\nConclusion:\nI. Some primates are apes.\nII. Some primates are monkeys.',
+      question: 'Statements:\nAll monkeys are apes.\nAll apes are primates.\n\nConclusion:\nI. Some primates are apes.\nII. Some primates are monkeys.',
       options: ['Only I follows', 'Both I and II follow', 'Only II follows', 'Neither I nor II follows'],
       correct: 1,
     },
