@@ -175,18 +175,22 @@ Edit `lib/questionBank.ts` to add or modify questions. Each question must have:
 
 ### GitHub Pages
 
-1. Update `next.config.js` to add your repository name:
-   ```js
-   basePath: '/mt2.0-aptitude-test-platform',
-   assetPrefix: '/mt2.0-aptitude-test-platform/',
-   ```
+This repository is configured for automatic deployment to GitHub Pages via GitHub Actions.
 
-2. Build and export:
-   ```bash
-   npm run build
-   ```
+**Quick Setup:**
 
-3. Deploy the `out` directory to GitHub Pages
+1. **Enable GitHub Pages**: Go to repository **Settings** → **Pages** → Set source to **GitHub Actions**
+
+2. **Add Supabase Secrets** (for data persistence):
+   - Go to **Settings** → **Secrets and variables** → **Actions**
+   - Add `NEXT_PUBLIC_SUPABASE_URL` with your Supabase project URL
+   - Add `NEXT_PUBLIC_SUPABASE_ANON_KEY` with your Supabase anon key
+
+3. **Deploy**: Push to `main` branch or manually trigger the workflow from the **Actions** tab
+
+For detailed setup instructions, see [GITHUB_PAGES_SETUP.md](./GITHUB_PAGES_SETUP.md).
+
+**Note**: The `basePath` is already configured in `next.config.js` for this repository. If you fork this repo, update the repository name in `next.config.js`.
 
 ### Vercel/Netlify
 

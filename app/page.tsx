@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { addParticipant } from '@/lib/supabaseTestManager';
+import { basePath } from '@/lib/basePath';
 
 export default function Home() {
   const router = useRouter();
@@ -75,7 +76,7 @@ export default function Home() {
           {/* Header with Logo */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-8">
             <Image
-              src="/logo.svg"
+              src={`${basePath}/logo.svg`}
               alt="MT2.0 Logo"
               width={80}
               height={80}

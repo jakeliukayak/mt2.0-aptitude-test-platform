@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { getCombinedTestQuestions, type Question } from '@/lib/questionBank';
 import { updateTestCompletion } from '@/lib/supabaseTestManager';
+import { basePath } from '@/lib/basePath';
 
 export default function TestPage() {
   const router = useRouter();
@@ -170,7 +171,7 @@ export default function TestPage() {
             {/* Logo - Center */}
             <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
               <Image
-                src="/logo.svg"
+                src={`${basePath}/logo.svg`}
                 alt="MT2.0 Logo"
                 width={80}
                 height={80}
