@@ -147,44 +147,48 @@ export default function TestPage() {
   return (
     <main className="min-h-screen flex items-center justify-center p-4 md:p-6">
       <div className="w-full max-w-4xl">
-        <div className="card relative">
-          {/* Quit Button */}
-          <button
-            onClick={handleQuitTest}
-            className="absolute top-4 right-4 md:top-6 md:right-6 px-3 py-1.5 md:px-4 md:py-2 text-sm font-medium text-red-600 border-2 border-red-600 rounded-lg hover:bg-red-50 transition-all"
-          >
-            Quit Test
-          </button>
-
+        <div className="card">
           {/* Test Header */}
-          <div className="relative mb-8 pb-4 border-b-2 border-gray-200 min-h-[100px] md:min-h-[120px]">
-            {/* Question Counter - Left */}
-            <div className="absolute left-0 top-0 flex flex-col gap-1">
-              <span className="font-medium text-sm md:text-base">
-                Question {currentQuestionIndex + 1} of {questions.length}
-              </span>
-              <span className="text-xs md:text-sm text-gray-600">
-                Combined Test
-              </span>
-            </div>
-
-            {/* Logo - Center */}
-            <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <Image
-                src={`${basePath}/logo.svg`}
-                alt="MT2.0 Logo"
-                width={80}
-                height={80}
-                className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
-                unoptimized
-              />
-            </div>
-
-            {/* Timer - Right */}
-            <div className="absolute right-0 top-0">
+          <div className="relative mb-8 pb-4 border-b-2 border-gray-200">
+            {/* Top Row: Quit Button and Timer */}
+            <div className="flex justify-between items-start mb-4 min-h-[48px]">
+              <button
+                onClick={handleQuitTest}
+                className="px-3 py-1.5 md:px-4 md:py-2 text-sm font-medium text-red-600 border-2 border-red-600 rounded-lg hover:bg-red-50 transition-all"
+              >
+                Quit Test
+              </button>
               <div className={timerClass}>
                 {timeRemaining}
               </div>
+            </div>
+
+            {/* Bottom Row: Question Info, Logo, and Spacer */}
+            <div className="flex justify-between items-center">
+              {/* Question Counter - Left */}
+              <div className="flex flex-col gap-1">
+                <span className="font-medium text-sm md:text-base">
+                  Question {currentQuestionIndex + 1} of {questions.length}
+                </span>
+                <span className="text-xs md:text-sm text-gray-600">
+                  Combined Test
+                </span>
+              </div>
+
+              {/* Logo - Center */}
+              <div className="absolute left-1/2 transform -translate-x-1/2">
+                <Image
+                  src={`${basePath}/logo.svg`}
+                  alt="MT2.0 Logo"
+                  width={80}
+                  height={80}
+                  className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
+                  unoptimized
+                />
+              </div>
+
+              {/* Spacer for symmetry - Right */}
+              <div className="w-24 md:w-32"></div>
             </div>
           </div>
 

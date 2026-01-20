@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { basePath } from "@/lib/basePath";
 
 export const metadata: Metadata = {
   title: "MT2.0 Aptitude Test",
   description: "A comprehensive aptitude test platform covering Numerical, Verbal, Inductive, and Deductive Reasoning",
   icons: {
-    icon: `${basePath}/logo.svg`,
+    icon: "/logo.svg",
   },
 };
 
