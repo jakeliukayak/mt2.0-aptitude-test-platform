@@ -163,8 +163,8 @@ export default function TestPage() {
               </div>
             </div>
 
-            {/* Bottom Row: Question Info, Logo, and Spacer */}
-            <div className="flex justify-between items-center">
+            {/* Bottom Row: Question Info and Logo */}
+            <div className="grid grid-cols-3 items-center gap-4">
               {/* Question Counter - Left */}
               <div className="flex flex-col gap-1">
                 <span className="font-medium text-sm md:text-base">
@@ -176,7 +176,7 @@ export default function TestPage() {
               </div>
 
               {/* Logo - Center */}
-              <div className="absolute left-1/2 transform -translate-x-1/2">
+              <div className="flex justify-center">
                 <Image
                   src={`${basePath}/logo.svg`}
                   alt="MT2.0 Logo"
@@ -187,8 +187,8 @@ export default function TestPage() {
                 />
               </div>
 
-              {/* Spacer for symmetry - Right */}
-              <div className="w-24 md:w-32"></div>
+              {/* Empty space for grid symmetry - Right */}
+              <div></div>
             </div>
           </div>
 
