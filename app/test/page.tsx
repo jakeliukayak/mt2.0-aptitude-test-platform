@@ -164,7 +164,7 @@ export default function TestPage() {
             </div>
 
             {/* Bottom Row: Question Info and Logo */}
-            <div className="grid grid-cols-3 items-center gap-4">
+            <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-4">
               {/* Question Counter - Left */}
               <div className="flex flex-col gap-1">
                 <span className="font-medium text-sm md:text-base">
@@ -176,18 +176,16 @@ export default function TestPage() {
               </div>
 
               {/* Logo - Center */}
-              <div className="flex justify-center">
-                <Image
-                  src={`${basePath}/logo.svg`}
-                  alt="MT2.0 Logo"
-                  width={80}
-                  height={80}
-                  className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
-                  unoptimized
-                />
-              </div>
+              <Image
+                src={`${basePath}/logo.svg`}
+                alt="MT2.0 Logo"
+                width={80}
+                height={80}
+                className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
+                unoptimized
+              />
 
-              {/* Empty space for grid symmetry - Right */}
+              {/* Empty space for grid symmetry */}
               <div></div>
             </div>
           </div>
