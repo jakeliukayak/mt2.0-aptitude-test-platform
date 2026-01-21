@@ -153,6 +153,10 @@ export default function Home() {
                 </div>
               )}
 
+              <p className="text-sm text-gray-600 text-center mt-4">
+                By signing up, you agree to receive updates from MT2.0 and consent to the use of personal data for the purpose of this web page.
+              </p>
+
               <button
                 type="submit"
                 disabled={isSubmitting}
